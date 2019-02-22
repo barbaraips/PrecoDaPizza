@@ -13,14 +13,18 @@ public class Principal {
         p2.adicionaIngrediente("presunto");
         p2.adicionaIngrediente("mussarela");
 
-        p1.adicionaIngrediente("oregano");
-        p1.adicionaIngrediente("azeitona");
 
         CarrinhoDeCompras.addPizza(p1);
         CarrinhoDeCompras.addPizza(p2);
         CarrinhoDeCompras.addPizza(p3);
 
-        System.out.println("O total da compra foi de " + CarrinhoDeCompras.precoTotal + " reais.");
+        System.out.println("O total do pedido e de " + CarrinhoDeCompras.retornaPreco() + " reais.");
+
+
+        System.out.println("Ingredientes utilizados: ");
+        for (String key : Pizza.hm.keySet()) {
+            System.out.println(key + ": " + Pizza.hm.get(key));
+        }
 
 
     }
