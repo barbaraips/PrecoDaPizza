@@ -7,8 +7,6 @@ class Pizza {
     static Map<String, Integer> hm = new HashMap<String, Integer>();
     ArrayList<String> listaIngredientes = new ArrayList<String>();
 
-    /* Todo: consertar o método, os ingredientes não estão sendo contados corretamente
-     *  */
     private static void contabilizaIngrediente(ArrayList<String> list) {
         for (String ingrediente : list) {
             if (hm.containsKey(ingrediente)) {
@@ -22,6 +20,10 @@ class Pizza {
     void adicionaIngrediente(String ingrediente){
         listaIngredientes.add(ingrediente);
         contabilizaIngrediente(listaIngredientes);
+    }
+
+    void zeraListaIngredientes(ArrayList<String> listaIngredientes) {
+        listaIngredientes.clear();
     }
 
     int getPreco() {
