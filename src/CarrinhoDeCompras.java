@@ -5,9 +5,10 @@ class CarrinhoDeCompras {
 
     static void  addPizza(Pizza p){
 
-        if (p.listaIngredientes.size() != 0)
+        if (p.listaIngredientes.size() != 0) {
             numeroPizzas += 1;
             precoTotal += p.getPreco();
+        }
     }
 
     static int retornaPreco() {

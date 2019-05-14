@@ -4,8 +4,8 @@ import java.util.Map;
 
 class Pizza {
 
-    static Map<String, Integer> hm = new HashMap<String, Integer>();
-    ArrayList<String> listaIngredientes = new ArrayList<String>();
+    static Map<String,Integer> hm = new HashMap<>();
+    ArrayList<String> listaIngredientes = new ArrayList<>();
 
     private static void contabilizaIngrediente(ArrayList<String> list) {
         for (String ingrediente : list) {
